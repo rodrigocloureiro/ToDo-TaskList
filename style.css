@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#mask {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  position: absolute;
+  top: 30px;
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  transform: translateY(-20px);
+}
+
+label.show {
+  transform: translateY(0);
+}
+
+label.treme {
+  animation: treme 0.1s;
+  animation-iteration-count: 10;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(img/gifs-de-anime-aesthetic-49.gif);
+  background-size: 100vw 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+input {
+  width: 241px;
+  height: 30px;
+  padding: 0 10px;
+  background-color: rgb(229, 137, 224);
+  color: #fff;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+input {
+  outline: none;
+}
+
+.inputEdit {
+  background-color: rgb(202, 13, 93);;
+  width: calc(278px - 40px);
+  height: 30px;
+  font-size: 16px;
+  margin: 0;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+#main {
+  display: flex;
+  position: relative;
+}
+
+#btnAddNewTask {
+  height: 30px;
+  padding: 0 10px;
+  background-color: rgb(229, 137, 224);
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+
+.d-none {
+  display: none;
+}
+
+.check {
+  text-decoration: line-through;
+}
+
+.check-bg {
+  background-color: rgb(27, 24, 237);
+}
+
+#btnAddNewTask:hover, #btnEditTask:hover {
+  background-color: rgb(87, 87, 87);
+  color: #fff;
+}
+
+#divUl {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  height: calc(100vh - 115px);
+}
+
+li {
+  width: 350px;
+  height: 30px;
+  padding: 0 0 0 10px;
+  background-color: rgb(202, 13, 93);
+  color: #fff;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.spanTask {
+  width: 170px;
+  line-height: 90%;
+  margin-top: 10px;
+}
+
+span.time, span.time-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 8px;
+  font-weight: bold;
+  color: black;
+}
+
+button[onclick] {
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+button.checkTask i {
+  color: rgb(0, 255, 0);
+}
+
+button.checkTask i:hover {
+  color: rgb(22, 89, 22);
+}
+
+button.editTask i, button.editTaskInput i {
+  color: rgb(0, 174, 255);
+}
+
+button.editTask i:hover {
+  color: rgb(16, 95, 132);
+}
+
+button.removeTask i {
+  color: rgb(255, 242, 0);
+}
+
+button.removeTask i:hover {
+  color: rgb(144, 137, 0);
+}
+
+/**/
+
+@keyframes treme {
+  0% {margin-left: 0;}
+  25% {margin-left: 5px;}
+  50% {margin-left: 0;}
+  75% {margin-left: -5px;}
+  100% {margin-left: 0;}
+}
